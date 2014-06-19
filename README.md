@@ -1,12 +1,17 @@
 getdata-004_Project
 ===================
 
+Information
+--------
 run_analysis.R requires several packages (reshape2, arules, plyr) install them this way :
+```R
 install.packages("reshape2")
 install.packages("arules")
 install.packages("plyr")
+```
 
-
+Instruction from Coursera
+--------
 Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
