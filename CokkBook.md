@@ -14,7 +14,29 @@ The tidy data set represents the average of each variables for each activity and
 
 Both the training and the test data sets were used.
 
-### Details
+### Explanation
+
+#### Overview :
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+
+#### In detail
+
+* Concatenate columns from subject_test, y_test, X_Test files into a dedicated data set
+* Concatenate columns from subject_train, y_train, X_Train files into a dedicated data set
+* Add for these 2 data set the column names based on the features.txt file
+* For each of these data set, we only keep columns talking about mean and standard deviation
+* Add the Subject and the activity column by giving understandable names
+* Combine the two data sets into one
+* Changing the activity id into labels by reading the activity_labels.txt file and using the library 'arules'
+* Use ddply function from plyr library in order to calculate the mean grouped by Subject and activity
+* write the newly created tidy data set into a file
+
+### Columns
 
 The data set can be found into this file :
 * tidy_dataset.csv
